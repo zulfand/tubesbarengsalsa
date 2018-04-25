@@ -18,8 +18,8 @@ void insert_relasi (string nama, string kursi, list_orang&LO, list_kursi&LK, lis
         if ((P != NULL)&&(Q!=NULL)){
             R = search_relasi_kursi(Q,LR);
             if (R == NULL){
-                R = alokasi(P,Q);
-                insert_first_relasi(R,RL);
+                R = alokasi_relasi(P,Q);
+                insert_first_relasi(R,LR);
             }else{
                 cout<< "Kursi Telah Dibooking" <<endl;
             }
@@ -29,8 +29,8 @@ void insert_relasi (string nama, string kursi, list_orang&LO, list_kursi&LK, lis
 
 adr_relasi search_relasi_kursi (adr_kursi Q, list_relasi &R){
     adr_relasi P;
-    P = first_relasi(LR);
-    while(P != NULL) && (info_child(P) != Q) {
+    P = first_relasi(R);
+    while((P != NULL) && (info_child(P) != Q)) {
         P = next(P);
 
     }
@@ -49,28 +49,28 @@ void delete_first_relasi (adr_relasi R, list_relasi &LR){
     if(R == NULL){
         return;
     }
-    adr_relasi q = First(L);
+    adr_relasi q = first_relasi(LR);
     while(q != R){
-        q = Next(q);
+        q = next(q);
     }
     if(next(q) == NULL){
         ///jika data yg dihapus adalah elm terakhir
-        adr_relasi z = Prev(q);
-        if(q != first(L)){
+        adr_relasi z = prev(q);
+        if(q != first_relasi(LR)){
             next(z) = NULL;
             prev(q) = NULL;
-            last(L) = z;
+            last_relasi(LR) = z;
         }else{
-            first(L) = NULL;
-            last(L) = NULL;
+            first_relasi(LR) = NULL;
+            last_relasi(LR) = NULL;
         }
 
     }else{
-        if(q == first(L)){
+        if(q == first_relasi(LR)){
             ///jika dia elm pertama
-            first(L) = next(q);
+            first_relasi(LR) = next(q);
             next(q) = NULL;
-            prev(first(L)) = NULL;
+            prev(first_relasi(LR)) = NULL;
         }else{
             ///jika dia bukan elm pertama
             adr_relasi z = prev(q);
@@ -82,13 +82,13 @@ void delete_first_relasi (adr_relasi R, list_relasi &LR){
         }
     }
     q = NULL;
-    DealocateRelasi(P);
+    DealocateRelasi(R);
 }
 
 
 
 void DealocateRelasi (adr_relasi &LR){
-    Next(LR) = NULL;
+    next(LR) = NULL;
     prev(LR) = NULL;
     delete(LR);
     LR = NULL;
