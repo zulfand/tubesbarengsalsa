@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1524663737 source:d:\diske\kuliah\github\salsa\main.cpp
+	<iostream>
+	"Orang.h"
+	"Kursi.h"
+	"Tiketbioskop.h"
+
+1524665308 d:\diske\kuliah\github\salsa\orang.h
+	<iostream>
+
+1524666119 d:\diske\kuliah\github\salsa\kursi.h
+	"Tiketbioskop.h"
+
+1524666196 d:\diske\kuliah\github\salsa\tiketbioskop.h
+	<cstdlib>
+	<iostream>
+	"Orang.h"
+
+1524665607 source:d:\diske\kuliah\github\salsa\orang.cpp
+	"Orang.h"
+
+1524665973 source:d:\diske\kuliah\github\salsa\kursi.cpp
+	"Kursi.h"
+
+1524666416 source:d:\diske\kuliah\github\salsa\programmenu.cpp
+	<iostream>
+	"Tiketbioskop.h"
+	"Orang.h"
+	"Kursi.h"
+

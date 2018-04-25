@@ -22,10 +22,11 @@ void MainMenu(int &ans){
 ///Menanmbahkan Orang di List Orang dari depan
 
 void registrasi(list_orang &LO){
+    string R;
     do{
-        string R;
+
         cout << " Registrasi " <<endl;
-        register(list_orang &LO)
+        Register(LO);
         cout<<" Data Berhasil Dimasukan"<<endl;
 
         cout<<endl;
@@ -33,36 +34,39 @@ void registrasi(list_orang &LO){
         cin>>R;
 
 
-    }while(R == Y);
+    }while(R == "Y");
 
 
 }
 
 void register_kursi(list_kursi &LK){
+
+    string a,b,R;
+
     do{
-        string a,b,R;
+
         cout << " Registrasi Kursi " <<endl;
         cout << "Masukan Film" <<endl;
         cin >>a;
         cout << "Masukan No Kursi" <<endl;
         cin >>b;
-        insert_kursi(b,a,LK)
+        insert_kursi(b,a,LK);
         cout<<" Data Berhasil Dimasukan"<<endl;
 
         cin>>R;
-    }while(a == Y
+    }while(a == "Y");
 }
 
 
 ///Menampilkan Semua Film di Bioskop
-void TampilkanSeluruhFilm(list_orang, list_kursi, list_relasi &LO,LK,LR){
+void TampilkanSeluruhFilm(list_orang &LO, list_kursi LK, list_relasi LR){
     cout << " Menampilkan Semua Film " <<endl;
     Print_AllFilm(LR, LK);
     cout <<endl;
     cout << " Menampilkan semua film selesai " <<endl;
 }
 ///Menampilkan Semua Kursi diBioskop
-void TampilkanSeluruhKursi(list_kursi, list_orang, list_relasi &LK,LO,LR)){
+void TampilkanSeluruhKursi(list_kursi &LK, list_orang LO, list_relasi LR){
     cout << " Menampilkan Semua Kursi " <<endl;
     Print_AllKursi(LK ,LR);
     cout <<endl;

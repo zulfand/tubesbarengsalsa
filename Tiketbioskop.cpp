@@ -10,11 +10,11 @@ adr_relasi alokasi_relasi (adr_orang P, adr_kursi Q){
 }
 
 void insert_relasi (string nama, string kursi, list_orang&LO, list_kursi&LK, list_relasi&LR){
-    P : adr_orang;
-    Q : adr_kursi;
-    R : adr_relasi;
-    P = search_orang(nama,LO);
-    Q = search_kursi(kursi,LK);
+    adr_orang P ;
+    adr_kursi Q;
+    adr_relasi R;
+    //P = search_orang(nama,LO);
+    //Q = search_kursi(kursi,LK);
         if ((P != NULL)&&(Q!=NULL)){
             R = search_relasi_kursi(Q,LR);
             if (R == NULL){
@@ -27,7 +27,7 @@ void insert_relasi (string nama, string kursi, list_orang&LO, list_kursi&LK, lis
 }
 
 
-void adr_relasi search_relasi_kursi (adr_kursi Q, list_relasi &R){
+adr_relasi search_relasi_kursi (adr_kursi Q, list_relasi &R){
     adr_relasi P;
     P = first_relasi(LR);
     while(P != NULL) && (info_child(P) != Q) {
