@@ -2,6 +2,8 @@
 #ifndef KURSI_H_INCLUDED
 #define KURSI_H_INCLUDED
 
+using namespace std;
+
 struct kursi{
     string no_kursi;
     string film;

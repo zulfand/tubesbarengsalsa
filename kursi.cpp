@@ -1,4 +1,4 @@
-#include <iostream>
+#include "Kursi.h"
 
 void insert_kursi (string kursi, string film, list_kursi&LK){
     adr_kursi P = alokasi_kursi(kursi, film);

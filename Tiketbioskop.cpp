@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Tiketbioskop.h"
 
 adr_relasi alokasi_relasi (adr_orang P, adr_kursi Q){
