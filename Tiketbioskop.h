@@ -2,6 +2,8 @@
 #ifndef TIKETBIOSKOP_H_INCLUDED
 #define TIKETBIOSKOP_H_INCLUDED
 #include <cstdlib>
+
+
 #define info(P) P -> info
 #define next(P) P -> next
 #define prev(P) P -> prev

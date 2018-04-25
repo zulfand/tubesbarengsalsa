@@ -23,7 +23,7 @@ adr_kursi alokasi_kursi (string kursi, string film){
 }
 
 
-void Print_AllFilm(list_relasi, list_kursi &LR, LK){
+void Print_AllFilm(list_relasi &LR, list_kursi LK){
     L = list_relasi;
     if(first(L) != NULL){
         Q = first(L);
@@ -34,7 +34,7 @@ void Print_AllFilm(list_relasi, list_kursi &LR, LK){
     }
 }
 
-void Print_AllKursi(List_kursi, list_relasi &LK, LR){
+void Print_AllKursi(List_kursi  &LK, list_relasi LR){
     L = list_orang;
     if(first(L) != NULL){
         Q = first(L);
